@@ -47,6 +47,13 @@ AB_OTA_UPDATER := false
 # Audio
 PRODUCT_PACKAGES += \
     audio.a2dp.default
+	
+# CameraGo	
+PRODUCT_PACKAGES += \
+    CameraGo
+
+PRODUCT_COPY_FILES += \
+    $(DEVICE_PATH)/configs/permissions/privapp-permissions-camera-go.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-camera-go.xml
 
 # Dex/ART optimization
 PRODUCT_ART_TARGET_INCLUDE_DEBUG_BUILD := false
