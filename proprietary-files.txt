@@ -10,9 +10,17 @@ lib64/libaptXHD_encoder.so
 bin/vtservice
 etc/init/init.vtservice.rc
 
-# Hotword Google
--priv-app\HotwordEnrollmentOKGoogleRISCV.apk
-framework\com.android.hotwordenrollment.common.util.jar
-framework\com.android.hotwordenrollment.common.util.impl.jar
-etc\permissions\com.android.hotwordenrollment.okgoogle.xml
-etc\permissions\com.android.hotwordenrollment.common.util.xml
+# Kernel Modules
+lib/modules/bt_drv.ko
+lib/modules/conninfra.ko
+lib/modules/fmradio_drv.ko
+lib/modules/fpsgo.ko
+lib/modules/gps_drv.ko
+lib/modules/kheaders.ko
+lib/modules/met.ko
+lib/modules/modules.alias
+lib/modules/modules.dep
+lib/modules/modules.load
+lib/modules/modules.softdep
+lib/modules/wlan_drv_gen4m.ko
+lib/modules/wmt_chrdev_wifi.ko
