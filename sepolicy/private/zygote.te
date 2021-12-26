@@ -1,0 +1,2 @@
+allow zygote vendor_file:file { read };
+allow zygote vendor_file:dir { read };
