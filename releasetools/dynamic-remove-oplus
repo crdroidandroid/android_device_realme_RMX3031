@@ -21,3 +21,6 @@ remove my_preload
 
 # Remove my_manifest since it might be there and we're not building super or rewriting it
 remove my_manifest
+
+# Remove my_product since it might be there and we're not building super or rewriting it
+remove my_product
