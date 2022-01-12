@@ -22,4 +22,8 @@
         <permission name="android.permission.REAL_GET_TASKS"/>
     </privapp-permissions>
 
+    <privapp-permissions package="org.lineageos.oppo.imsinit">
+        <permission name="android.permission.INTERACT_ACROSS_USERS"/>
+    </privapp-permissions>
+
 </permissions>
