@@ -38,9 +38,8 @@ ANCIENT_GAPPS := true
 
 # Official-ify
 ANCIENT_OFFICIAL := true
-FORCE_LAWNCHAIR := true
+EXTRA_UDFPS_ANIMATIONS := true
 TARGET_BOOT_ANIMATION_RES := 1080
-
 
 # Build info
 BUILD_FINGERPRINT := "alps/vnd_oppo6893/oppo6893:11/RP1A.200720.011/mp2tc16sppr5V1:user/release-keys"
