@@ -73,7 +73,6 @@ public class GameModeTileService extends TileService {
         } else AppNotification.Cancel(this, GameModeSwitch.GameMode_Notification_Channel_ID);
         Utils.writeValue(GameModeSwitch.getFile(), enabled ? "0" : "1");
         Utils.writeValue(DeviceSettings.TP_DIRECTION, enabled ? "0" : "1");
-        SystemProperties.set("perf_profile", enabled ? "0" : "1");
         if (sharedPrefs.getBoolean("dnd", false)) GameModeTileDND();
         sharedPrefs.edit().putBoolean(DeviceSettings.KEY_GAME_SWITCH, !enabled).commit();
         getQsTile().setState(enabled ? Tile.STATE_INACTIVE : Tile.STATE_ACTIVE);

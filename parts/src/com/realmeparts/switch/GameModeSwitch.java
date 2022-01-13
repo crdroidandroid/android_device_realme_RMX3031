@@ -98,7 +98,6 @@ public class GameModeSwitch implements OnPreferenceChangeListener {
         Boolean enabled = (Boolean) newValue;
         Utils.writeValue(getFile(), enabled ? "1" : "0");
         Utils.writeValue(DeviceSettings.TP_DIRECTION, enabled ? "1" : "0");
-        SystemProperties.set("perf_profile", enabled ? "1" : "0");
         GameModeDND();
         return true;
     }

@@ -49,10 +49,8 @@ public class DeviceSettings extends PreferenceFragment
     public static final String KEY_HBM_SWITCH = "hbm";
     public static final String KEY_DC_SWITCH = "dc";
     public static final String KEY_OTG_SWITCH = "otg";
-    public static final String KEY_PERF_PROFILE = "perf_profile";
 	public static final String KEY_VIBRATION_STRENGTH = "vibration_strength";
 	public static final String VIB_STRENGTH_SYSTEM_PROPERTY = "persist.vib_strength";
-    public static final String PERF_PROFILE_SYSTEM_PROPERTY = "persist.perf_profile";
     public static final String KEY_GAME_SWITCH = "game";
     public static final String KEY_CHARGING_SWITCH = "smart_charging";
     public static final String KEY_CHARGING_SPEED = "charging_speed";
@@ -91,7 +89,6 @@ public class DeviceSettings extends PreferenceFragment
     private boolean HBM_DeviceMatched;
     private boolean sRGB_DeviceMatched;
     private SecureSettingListPreference mCABC;
-	private SecureSettingListPreference mPerfProfile;
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
@@ -163,11 +160,6 @@ public class DeviceSettings extends PreferenceFragment
         mCABC.setSummary(mCABC.getEntry());
         mCABC.setOnPreferenceChangeListener(this);
 		
-		mPerfProfile = (SecureSettingListPreference) findPreference(KEY_PERF_PROFILE);
-        mPerfProfile.setValue(Utils.getStringProp(PERF_PROFILE_SYSTEM_PROPERTY, "0"));
-        mPerfProfile.setSummary(mPerfProfile.getEntry());
-        mPerfProfile.setOnPreferenceChangeListener(this);
-		
 		mDT2WModeSwitch = (TwoStatePreference) findPreference(KEY_DT2W_SWITCH);
         mDT2WModeSwitch.setEnabled(DT2WModeSwitch.isSupported());
         mDT2WModeSwitch.setChecked(DT2WModeSwitch.isCurrentlyEnabled(this.getContext()));
@@ -225,11 +217,6 @@ public class DeviceSettings extends PreferenceFragment
             mCABC.setValue((String) newValue);
             mCABC.setSummary(mCABC.getEntry());
             Utils.setStringProp(CABC_SYSTEM_PROPERTY, (String) newValue);
-        }
-		if (preference == mPerfProfile) {
-            mPerfProfile.setValue((String) newValue);
-            mPerfProfile.setSummary(mPerfProfile.getEntry());
-            Utils.setStringProp(PERF_PROFILE_SYSTEM_PROPERTY, (String) newValue);
         }
 		if (preference == mVibStrength) {
             mVibStrength.setValue((String) newValue);

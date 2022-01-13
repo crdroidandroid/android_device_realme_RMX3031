@@ -33,26 +33,6 @@ on property:persist.cabc_profile=2
     # CABC aggressive
 on property:persist.cabc_profile=3
     write /sys/kernel/oppo_display/LCM_CABC 3
-
-# Performance profiles
-on property:persist.perf_profile=0
-    write /sys/module/ged/parameters/gx_game_mode 0
-	write /sys/module/ged/parameters/gx_force_cpu_boost 0
-	write /sys/module/ged/parameters/gx_boost_on 0
-	write /sys/module/ged/parameters/boost_gpu_enable 0
-	write /sys/module/ged/parameters/ged_smart_boost 1
-
-on property:persist.perf_profile=1
-    write /sys/module/ged/parameters/gx_game_mode 0
-	write /sys/module/ged/parameters/gx_force_cpu_boost 0
-	write /sys/module/ged/parameters/gx_boost_on 0
-	write /sys/module/ged/parameters/boost_gpu_enable 0
-
-on property:persist.perf_profile=2
-    write /sys/module/ged/parameters/gx_game_mode 1
-	write /sys/module/ged/parameters/gx_force_cpu_boost 1
-	write /sys/module/ged/parameters/gx_boost_on 1
-	write /sys/module/ged/parameters/boost_gpu_enable 1
 	
 # Vibration Strength
 on property:persist.vib_strength=*
