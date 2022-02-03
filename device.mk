@@ -91,10 +91,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     init.mt6893.rc
 
-# Copy the kernel from the prebuilts directory.
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/prebuilt/Image.gz:kernel
-
 # Keylayout
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/keylayout/touchpanel.kl:$(TARGET_COPY_OUT_SYSTEM)/usr/keylayout/touchpanel.kl
@@ -105,11 +101,8 @@ PRODUCT_AAPT_PREF_CONFIG := xxxhdpi
 
 # Lights
 PRODUCT_PACKAGES += \
-    android.hardware.light@2.0-service.RMX3031
-
-# NFC
-#PRODUCT_SOONG_NAMESPACES += \
-#    vendor/nxp/opensource/sn100x
+    android.hardware.light@2.0-service.RMX3031 \
+    android.hardware.sensors@2.0-service.multihal
 
 # NFC
 PRODUCT_PACKAGES += \
@@ -127,7 +120,6 @@ PRODUCT_PACKAGES += \
     vendor.nxp.hardware.nfc@1.1-service
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/nfc/libnfc-nci.conf:$(TARGET_COPY_OUT_SYSTEM)/etc/libnfc-nci.conf \
     $(LOCAL_PATH)/nfc/libnfc-nxp.conf:$(TARGET_COPY_OUT_SYSTEM)/etc/libnfc-nxp.conf
 
 # Oneplus FileManager
