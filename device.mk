@@ -28,7 +28,8 @@ PRODUCT_EXTRA_VNDK_VERSIONS := 30
 PRODUCT_SHIPPING_API_LEVEL := 30
 
 # Call proprietary blob setup
-$(call inherit-product-if-exists, vendor/realme/RMX3031/RMX3031-vendor.mk)
+$(call inherit-product, vendor/realme/RMX3031/RMX3031-vendor.mk)
+$(call inherit-product, vendor/realme/IMS-RMX3031/mtk-ims.mk)
 
 # Dynamic Partition
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
@@ -110,6 +111,7 @@ PRODUCT_PACKAGES += \
 #PRODUCT_SOONG_NAMESPACES += \
 #    vendor/nxp/opensource/sn100x
 
+# NFC
 PRODUCT_PACKAGES += \
     NfcNci \
     com.android.nfc_extras \
@@ -128,12 +130,12 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/nfc/libnfc-nci.conf:$(TARGET_COPY_OUT_SYSTEM)/etc/libnfc-nci.conf \
     $(LOCAL_PATH)/nfc/libnfc-nxp.conf:$(TARGET_COPY_OUT_SYSTEM)/etc/libnfc-nxp.conf
 
+# Oneplus FileManager
 PRODUCT_PACKAGES += \
     OPFiles
 	
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/OPFiles/privapp-permissions-op-files.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-op-files.xml \
-
 
 # Overlays
 PRODUCT_PACKAGES += \
@@ -177,16 +179,6 @@ PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
 # Vendor overlay
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/vendor_overlay/,$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/30/)
-
-# Telephony
-PRODUCT_BOOT_JARS += \
-    mediatek-common \
-    mediatek-framework \
-    mediatek-ims-base \
-    mediatek-ims-common \
-    mediatek-telecom-common \
-    mediatek-telephony-base \
-    mediatek-telephony-common
 
 # Wi-Fi
 PRODUCT_PACKAGES += \
