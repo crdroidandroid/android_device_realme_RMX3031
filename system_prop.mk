@@ -6,6 +6,10 @@ PRODUCT_PRODUCT_PROPERTIES += \
 PRODUCT_PRODUCT_PROPERTIES += \
     persist.bluetooth.bluetooth_audio_hal.disabled=true
 
+# CABC
+PRODUCT_SYSTEM_PROPERTIES += \
+    persist.cabc_profile=2
+
 # Camera
 PRODUCT_SYSTEM_PROPERTIES += \
     vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,com.google.camera \
