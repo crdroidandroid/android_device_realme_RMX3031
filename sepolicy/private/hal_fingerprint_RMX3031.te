@@ -12,4 +12,4 @@ allow hal_fingerprint_RMX3031 hal_fingerprint_hwservice:hwservice_manager find;
 allow hal_fingerprint_RMX3031 sysfs_fod:file rw_file_perms;
 wakelock_use(hal_fingerprint_RMX3031)
 allow hal_fingerprint_RMX3031 sysfs:file { open write read getattr };
-
+allow hal_fingerprint_RMX3031 sysfs_dm:file rw_file_perms;
