@@ -21,10 +21,7 @@
             1 - LOCAL HBM
     -->
     <integer name="config_udfpsHbmType">0</integer>
-
-    <!-- Udfps vendor code -->
-    <integer name="config_udfps_vendor_code">0</integer>
-    
+  
     <!-- Doze: does this device support STATE_DOZE?  -->
     <bool name="doze_display_state_supported">false</bool>
 
