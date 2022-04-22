@@ -48,6 +48,10 @@ AB_OTA_UPDATER := false
 # Audio
 PRODUCT_PACKAGES += \
     audio.a2dp.default
+
+# FOD
+TARGET_HAS_UDFPS := true
+EXTRA_UDFPS_ANIMATIONS := true
 	
 # Dex/ART optimization
 PRODUCT_ART_TARGET_INCLUDE_DEBUG_BUILD := false
