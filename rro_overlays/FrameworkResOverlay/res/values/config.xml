@@ -445,6 +445,9 @@
          auto-brightness. If unset, then it just gets the default sensor of type TYPE_LIGHT. -->
     <string name="config_displayLightSensorType">android.sensor.wise_light</string>
 
+    <!-- Screen off delay -->
+    <integer name="config_screen_off_delay">0</integer>
+    
     <!-- Minimum screen brightness allowed by the power manager. -->
     <integer name="config_screenBrightnessDim">2</integer>
     
