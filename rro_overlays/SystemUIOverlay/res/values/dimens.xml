@@ -21,10 +21,10 @@
     <dimen name="status_bar_padding_top">6dp</dimen>
 
     <!-- the padding on the start of the statusbar -->
-    <dimen name="status_bar_padding_start">1dp</dimen>
+    <dimen name="status_bar_padding_start">3dp</dimen>
 
     <!-- the padding on the end of the statusbar -->
-    <dimen name="status_bar_padding_end">16dp</dimen>
+    <dimen name="status_bar_padding_end">9dp</dimen>
 
     <!-- Burn-in protection -->
     <dimen name="horizontal_max_swift">3.0dp</dimen>
