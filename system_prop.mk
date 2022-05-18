@@ -80,3 +80,6 @@ PRODUCT_PRODUCT_PROPERTIES += \
 # Iorap
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.device_config.runtime_native_boot.iorap_readahead_enable=true
+
+#AOD
+debug.force_no_blanking=true
