@@ -28,13 +28,14 @@
     <!-- Allow devices override audio panel location to the left side -->
     <bool name="config_audioPanelOnLeftSide">true</bool>
 
-    <!-- Burn-in protection -->
-    <bool name="config_statusBarBurnInProtection">true</bool>
-    <integer name="config_shift_interval">40</integer>
-
     <!-- Should we vibrate on an icon animation of the shelf. This should only be active if the
     vibrator is capable of subtle vibrations -->
     <bool name="config_vibrateOnIconAnimation">true</bool>
+
+    <!-- Burn in protection -->
+    <bool name="config_statusBarBurnInProtection">true</bool>
+    <integer name="config_shift_interval">15</integer>
+
     <!-- The radius of the enrollment progress bar, in dp -->
     <integer name="config_udfpsEnrollProgressBar" translatable="false">102</integer>
 </resources>
