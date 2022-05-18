@@ -30,6 +30,7 @@ PRODUCT_SHIPPING_API_LEVEL := 30
 # Call proprietary blob setup
 $(call inherit-product, vendor/realme/RMX3031/RMX3031-vendor.mk)
 $(call inherit-product, vendor/realme/IMS-RMX3031/mtk-ims.mk)
+
 # Dynamic Partition
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 PRODUCT_BUILD_SUPER_PARTITION := false
@@ -160,3 +161,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     TetheringConfigOverlay \
     WifiOverlay
+
+# CameraGo	
+PRODUCT_PACKAGES += \
+    CameraGo
+
+PRODUCT_COPY_FILES += \
+    $(DEVICE_PATH)/configs/permissions/privapp-permissions-camera-go.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-camera-go.xml
