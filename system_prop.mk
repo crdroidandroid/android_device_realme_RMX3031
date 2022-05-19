@@ -85,3 +85,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 #AOD
 debug.force_no_blanking=true
+
+# Blurs
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    ro.surface_flinger.supports_background_blur=1
