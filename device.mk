@@ -183,7 +183,14 @@ PRODUCT_PACKAGES += \
 # GCamG
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/configs/permissions/privapp-permissions-camera-go.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-camera-go.xml
+
+# Symbols
+PRODUCT_PACKAGES += \
+    libshim_vtservice
     
+PRODUCT_PACKAGES += \
+    ImsServiceBase
+        
 # Google Call recording
 PRODUCT_PACKAGES += \
     com.google.android.apps.dialer.call_recording_audio.features.xml
