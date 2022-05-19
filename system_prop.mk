@@ -79,6 +79,9 @@ PRODUCT_PRODUCT_PROPERTIES += \
     ro.crypto.volume.metadata.method=dm-default-key \
     ro.crypto.volume.options=::v2
 
+# Chipset
+ro.soc.manufacturer=Mediatek
+ro.soc.model=MT6893
 # Iorap
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.device_config.runtime_native_boot.iorap_readahead_enable=true
