@@ -108,3 +108,8 @@ persist.service.pcsync.enable=0
 
 # Disable blur on app launch
 ro.launcher.blur.appLaunch=0
+
+# Display HDR
+ro.surface_flinger.use_color_management=true
+ro.surface_flinger.has_wide_color_display=true
+ro.surface_flinger.has_HDR_display=true
