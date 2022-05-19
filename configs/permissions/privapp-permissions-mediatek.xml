@@ -18,6 +18,7 @@
         <permission name="android.permission.MASTER_CLEAR"/>
         <permission name="android.permission.READ_LOGS"/>
         <permission name="android.permission.MODIFY_PHONE_STATE"/>
+	<permission name="android.permission.UPDATE_DEVICE_STATS"/>
         <permission name="android.permission.DUMP"/>
         <permission name="android.permission.REAL_GET_TASKS"/>
     </privapp-permissions>
