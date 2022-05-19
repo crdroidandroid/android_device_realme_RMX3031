@@ -105,3 +105,6 @@ ro.config.dha_tunnable=1
 # Smoothens UI
 persist.service.lgospd.enable=0
 persist.service.pcsync.enable=0
+
+# Disable blur on app launch
+ro.launcher.blur.appLaunch=0
