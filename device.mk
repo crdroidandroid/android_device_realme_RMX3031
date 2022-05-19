@@ -50,10 +50,6 @@ PRODUCT_PACKAGES += \
 TARGET_HAS_UDFPS := true
 EXTRA_UDFPS_ANIMATIONS := true
 
-# Overlays
-DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay-lineage
-
 # Dex/ART optimization
 PRODUCT_ART_TARGET_INCLUDE_DEBUG_BUILD := false
 PRODUCT_DEX_PREOPT_DEFAULT_COMPILER_FILTER := everything
@@ -131,14 +127,15 @@ PRODUCT_COPY_FILES += \
 
 # Overlays
 PRODUCT_PACKAGES += \
-    FrameworkResOverlay \
-    SystemUIOverlay \
+	FrameworkResOverlay \
+	SystemUIOverlay \
 	SettingsOverlay \
-	TelephonyOverlay
+	TelephonyOverlay \
+	DialerOverlay
 
 # Enforce RRO targets
 PRODUCT_ENFORCE_RRO_TARGETS := *
-	
+
 # MTK IMS Overlays
 PRODUCT_PACKAGES += \
     mtk-ims \
@@ -176,7 +173,7 @@ PRODUCT_PACKAGES += \
     TetheringConfigOverlay \
     WifiOverlay
 
-# CameraGo	
+# CameraGo
 PRODUCT_PACKAGES += \
     CameraGo
 
@@ -187,10 +184,10 @@ PRODUCT_COPY_FILES += \
 # Symbols
 PRODUCT_PACKAGES += \
     libshim_vtservice
-    
+ 
 PRODUCT_PACKAGES += \
     ImsServiceBase
-        
+
 # Google Call recording
 PRODUCT_PACKAGES += \
     com.google.android.apps.dialer.call_recording_audio.features.xml
