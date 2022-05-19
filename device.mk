@@ -177,6 +177,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     CameraGo
 
+# Remove unwanted packages
+PRODUCT_PACKAGES += \
+    RemovePackages
+    
 # GCamG
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/configs/permissions/privapp-permissions-camera-go.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-camera-go.xml
