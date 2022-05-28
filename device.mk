@@ -69,7 +69,7 @@ PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/vendor_overlay/etc/fstab.mt6893:$(TARGET_COPY_OUT_RAMDISK)/fstab.mt6893
 
 # HotwordEnrollement
-    $(LOCAL_PATH)/configs/permissions/privapp-permissions-hotword.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-hotword.xml
+    $(DEVICE_PATH)/configs/permissions/privapp-permissions-hotword.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-hotword.xml
 
 # Freeform Multiwindow
 PRODUCT_COPY_FILES += \
@@ -197,4 +197,4 @@ PRODUCT_PACKAGES += \
 
 # Google Call recording
 PRODUCT_PACKAGES += \
-    com.google.android.apps.dialer.call_recording_audio.features.xml
+    $(DEVICE_PATH)/configs/permissions/com.google.android.apps.dialer.call_recording_audio.features.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/com.google.android.apps.dialer.call_recording_audio.features.xml
