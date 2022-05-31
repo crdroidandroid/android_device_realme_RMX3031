@@ -46,6 +46,8 @@ AB_OTA_UPDATER := false
 PRODUCT_PACKAGES += \
     audio.a2dp.default
 
+TARGET_EXCLUDES_AUDIOFX := true
+
 # FOD
 TARGET_HAS_UDFPS := true
 EXTRA_UDFPS_ANIMATIONS := true
