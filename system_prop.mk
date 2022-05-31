@@ -30,7 +30,7 @@ PRODUCT_PRODUCT_PROPERTIES += \
     ro.com.google.ime.corner_key_r=35
 
 # IMS
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+PRODUCT_SYSTEM_PROPERTIES  += \
     persist.dbg.volte_avail_ovr=1 \
     persist.dbg.vt_avail_ovr=1 \
     persist.dbg.wfc_avail_ovr=1 \
@@ -38,7 +38,7 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     persist.vendor.mtk.vilte.enable=0
 
 # NFC
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+PRODUCT_SYSTEM_PROPERTIES  += \
     persist.sys.nfc.disPowerSave=1 \
     persist.nfc.smartcard.recorder.enable=true \
     persist.sys.nfc.default=on
@@ -88,14 +88,14 @@ PRODUCT_PRODUCT_PROPERTIES += \
 ro.soc.manufacturer=Mediatek
 ro.soc.model=MT6893
 # Iorap
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_PRODUCT_PROPERTIES  += \
     persist.device_config.runtime_native_boot.iorap_readahead_enable=true
 
 #AOD
 debug.force_no_blanking=true
 
 # Blurs
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+PRODUCT_SYSTEM_PROPERTIES  += \
     ro.surface_flinger.supports_background_blur=1
 
 # Pre-rendering
