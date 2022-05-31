@@ -809,4 +809,9 @@
     <!-- The max scale for the wallpaper when it's zoomed in -->
     <item name="config_wallpaperMaxScale" format="float" type="dimen">1</item>
 
+    <string-array name="configs_base">
+        <!-- ART heap compaction for cached apps -->
+        <item>activity_manager/use_compaction=true</item>
+    </string-array>
+    
 </resources>
