@@ -68,3 +68,9 @@ lib/modules/modules.load
 lib/modules/modules.softdep
 lib/modules/wlan_drv_gen4m.ko
 lib/modules/wmt_chrdev_wifi.ko
+
+# 
+# HotwordEnrollment - from RMX3031_12_C07
+-my_product/priv-app/HotwordEnrollmentOKGoogleCORTEXM4.apk:product/priv-app/HotwordEnrollmentOKGoogleCORTEXM4/HotwordEnrollmentOKGoogleCORTEXM4.apk
+-my_product/framework/com.android.hotwordenrollment.common.util.jar:system_ext/framework/com.android.hotwordenrollment.common.util.jar
+my_product/etc/permissions/com.android.hotwordenrollment.common.util.xml:system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml
