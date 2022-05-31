@@ -1,0 +1,14 @@
+[
+  {
+    "repository": "proprietary_vendor_realme_RMX3031",
+    "target_path": "vendor/realme/RMX3031"
+  },
+  {
+    "repository": "android_kernel_realme_RMX3031",
+    "target_path": "kernel/realme/RMX3031"
+  },
+  {
+    "repository": "proprietary_vendor_realme_RMX3031-IMS",
+    "target_path": "vendor/realme/IMS-RMX3031"
+  }
+]
