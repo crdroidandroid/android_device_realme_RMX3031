@@ -182,6 +182,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     CameraGo
 
+# ViperFX
+PRODUCT_PACKAGES += \
+    ViperFX
+
 # Remove unwanted packages
 PRODUCT_PACKAGES += \
     RemovePackages
