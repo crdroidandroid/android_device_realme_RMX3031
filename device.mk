@@ -130,11 +130,12 @@ PRODUCT_COPY_FILES += \
 
 # Overlays
 PRODUCT_PACKAGES += \
-	FrameworkResOverlay \
-	SystemUIOverlay \
-	SettingsOverlay \
-	TelephonyOverlay \
-	DialerOverlay
+    FrameworkResOverlay \
+    SystemUIOverlay \
+    SettingsOverlay \
+    TelephonyOverlay \
+    DialerOverlay \
+    NotchBarKiller
 
 # Enforce RRO targets
 PRODUCT_ENFORCE_RRO_TARGETS := *
@@ -198,3 +199,4 @@ PRODUCT_PACKAGES += \
 # Google Call recording
 PRODUCT_PACKAGES += \
     $(DEVICE_PATH)/configs/permissions/com.google.android.apps.dialer.call_recording_audio.features.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/com.google.android.apps.dialer.call_recording_audio.features.xml
+
