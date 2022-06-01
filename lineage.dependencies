@@ -10,5 +10,9 @@
   {
     "repository": "proprietary_vendor_realme_RMX3031-IMS",
     "target_path": "vendor/realme/IMS-RMX3031"
+  },
+  {
+    "repository": "android_prebuilts_clang_host_linux-x86_clang-6443078",
+    "target_path": "prebuilts/clang/host/linux-x86/clang-6443078"
   }
 ]
