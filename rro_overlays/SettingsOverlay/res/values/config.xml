@@ -41,5 +41,10 @@
     <string name="config_batteryDesignCapacity">/sys/class/power_supply/battery/charge_full_design</string>
     <string name="config_batteryCalculatedCapacity">/sys/class/power_supply/battery/charge_counter</string>
     <bool name="config_supportBatteryHealth">true</bool>
-    
+
+    <!-- Sensor types -->
+    <string name="pickup_sensor_type">android.sensor.pickup_detect</string>
+    <!-- Sensor trigger values -->
+    <item name="pickup_sensor_value" format="float" type="dimen">0.0</item>
+        
 </resources>
