@@ -93,7 +93,7 @@ TARGET_KERNEL_SOURCE := kernel/realme/RMX3031
 TARGET_KERNEL_CONFIG := cupida_defconfig
 TARGET_KERNEL_CLANG_COMPILE := true
 TARGET_KERNEL_CLANG_VERSION := 6443078
-TARGET_KERNEL_CLANG_PATH := prebuilts/clang/host/linux-x86/clang-6443078
+TARGET_KERNEL_CLANG_PATH := $(LOCAL_PATH)/../../../prebuilts/clang/host/linux-x86/clang-6443078
 
 BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)/prebuilt/dtbo.img
 BOARD_MKBOOTIMG_ARGS += --ramdisk_offset $(BOARD_RAMDISK_OFFSET)
