@@ -4,7 +4,9 @@ PRODUCT_PRODUCT_PROPERTIES += \
 
 # Bluetooth
 PRODUCT_PRODUCT_PROPERTIES += \
-    persist.bluetooth.bluetooth_audio_hal.disabled=true
+    persist.bluetooth.bluetooth_audio_hal.disabled=true \
+    persist.bluetooth.a2dp_offload.disabled=true \
+    ro.bluetooth.a2dp_offload.supported=false
 
 # CABC
 PRODUCT_SYSTEM_PROPERTIES += \
@@ -36,6 +38,10 @@ PRODUCT_SYSTEM_PROPERTIES  += \
     persist.dbg.wfc_avail_ovr=1 \
     persist.vendor.vilte_support=0 \
     persist.vendor.mtk.vilte.enable=0
+
+# Media Transcoding
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.sys.fuse.transcode_default=false
 
 # NFC
 PRODUCT_SYSTEM_PROPERTIES  += \
