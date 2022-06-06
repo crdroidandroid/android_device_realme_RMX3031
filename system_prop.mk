@@ -85,8 +85,9 @@ PRODUCT_PRODUCT_PROPERTIES += \
     ro.crypto.volume.options=::v2
 
 # Chipset
-ro.soc.manufacturer=Mediatek
-ro.soc.model=MT6893
+ro.board.manufacturer=Mediatek
+ro.board.model=MT6893
+
 # Iorap
 PRODUCT_PRODUCT_PROPERTIES  += \
     persist.device_config.runtime_native_boot.iorap_readahead_enable=true
