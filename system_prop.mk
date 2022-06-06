@@ -99,19 +99,6 @@ debug.force_no_blanking=true
 PRODUCT_SYSTEM_PROPERTIES  += \
     ro.surface_flinger.supports_background_blur=1
 
-# Pre-rendering
-ro.vendor.perf.scroll_opt=true
-
-# Venom
-ro.surface_flinger.running_without_sync_framework=true
-
-# DHA Tunning
-ro.config.dha_tunnable=1
-
-# Smoothens UI
-persist.service.lgospd.enable=0
-persist.service.pcsync.enable=0
-
 # Disable blur on app launch
 ro.launcher.blur.appLaunch=0
 
