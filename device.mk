@@ -110,7 +110,7 @@ PRODUCT_AAPT_PREF_CONFIG := xxxhdpi
 
 # Lights
 PRODUCT_PACKAGES += \
-    android.hardware.light@2.0-service.RMX3031 \
+    android.hardware.light-service.RMX3031 \
     android.hardware.sensors@2.0-service.multihal
 
 # NFC
