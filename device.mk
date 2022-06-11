@@ -165,6 +165,10 @@ PRODUCT_SOONG_NAMESPACES += \
 -include $(DEVICE_PATH)/system_prop.mk
 PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
 
+# RMOverlayManager
+PRODUCT_PACKAGES += \
+    RMOverlayManager
+    
 # Touch
 PRODUCT_PACKAGES += \
     vendor.lineage.touch@1.0-service.RMX3031
