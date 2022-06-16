@@ -35,10 +35,10 @@ TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_SUPPORTS_QUICK_TAP := true
 
 # Build info
-BUILD_FINGERPRINT := "alps/vnd_oppo6893/oppo6893:11/RP1A.200720.011/mp2tc16sppr5V1:user/release-keys"
+BUILD_FINGERPRINT := "oplus/ossi/ossi:12/SP1A.210812.016/1653047465326:user/release-keys"
 PRODUCT_BUILD_PROP_OVERRIDES += \
     TARGET_DEVICE=RMX3031 \
     PRODUCT_NAME=RMX3031 \
-    PRIVATE_BUILD_DESC="sys_oplus_mssi_64_cn-user-11-RP1A.200720.011-mp2tc16sppr5V1-release-keys"
+    PRIVATE_BUILD_DESC="sys_mssi_64_cn_armv82-user-12-SP1A.210812.016-1653046777560-release-keys"
 
 PRODUCT_GMS_CLIENTID_BASE := android-oppo
