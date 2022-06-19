@@ -69,6 +69,9 @@ lib/modules/modules.softdep
 lib/modules/wlan_drv_gen4m.ko
 lib/modules/wmt_chrdev_wifi.ko
 
+# Charger - From Redmi/merlin/merlin:11/RP1A.200720.011/V12.5.1.0.RJOMIXM:user/release-keys
+-bin/charger:bin/chargeonlymode|eeb5a0e80057cce782b4555389310e83a408ad37
+
 # 
 # HotwordEnrollment - from RMX3031_12_C07
 -my_product/priv-app/HotwordEnrollmentOKGoogleCORTEXM4.apk:product/priv-app/HotwordEnrollmentOKGoogleCORTEXM4/HotwordEnrollmentOKGoogleCORTEXM4.apk

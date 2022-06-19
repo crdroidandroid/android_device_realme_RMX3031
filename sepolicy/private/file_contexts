@@ -18,3 +18,6 @@
 
 # V4A Drivers
 /odm/etc/audio_effects.xml      u:object_r:vendor_configs_file:s0
+
+# Executables
+/system/bin/chargeonlymode                    u:object_r:charger_exec:s0
