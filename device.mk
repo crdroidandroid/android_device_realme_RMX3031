@@ -128,7 +128,8 @@ PRODUCT_PACKAGES += \
     TelephonyOverlay \
     DialerOverlay \
     NotchBarKiller \
-    DocumentsUIOverlay
+    DocumentsUIOverlay \
+    SettingsProviderOverlay
 
 # Enforce RRO targets
 PRODUCT_ENFORCE_RRO_TARGETS := *
