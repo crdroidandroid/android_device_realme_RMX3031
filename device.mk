@@ -205,3 +205,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     $(DEVICE_PATH)/configs/permissions/com.google.android.apps.dialer.call_recording_audio.features.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/com.google.android.apps.dialer.call_recording_audio.features.xml
 
+# Recovery
+PRODUCT_PACKAGES += \
+    init.recovery.mt6893.rc
+    
