@@ -169,6 +169,9 @@ PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
 PRODUCT_PACKAGES += \
     RMOverlayManager
     
+# Setup dalvik vm configs
+$(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
+
 # Touch
 PRODUCT_PACKAGES += \
     vendor.lineage.touch@1.0-service.RMX3031
