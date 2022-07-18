@@ -18,18 +18,17 @@ DEVICE_PATH := device/realme/RMX3031
 
 # Installs gsi keys into ramdisk, to boot a developer GSI with verified boot.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/developer_gsi_keys.mk)
+$(call inherit-product, vendor/realme/IMS-RMX3031/mtk-ims.mk)
 
 # APEX
 TARGET_FLATTEN_APEX := true
 
 # VNDK
 PRODUCT_EXTRA_VNDK_VERSIONS := 30
-
 PRODUCT_SHIPPING_API_LEVEL := 30
 
 # Call proprietary blob setup
 $(call inherit-product, vendor/realme/RMX3031/RMX3031-vendor.mk)
-$(call inherit-product, vendor/realme/IMS-RMX3031/mtk-ims.mk)
 
 # Dynamic Partition
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
@@ -46,6 +45,7 @@ AB_OTA_UPDATER := false
 PRODUCT_PACKAGES += \
     audio.a2dp.default
 
+# Exclude AudioFX
 TARGET_EXCLUDES_AUDIOFX := true
 
 # FOD
@@ -70,24 +70,22 @@ PRODUCT_DEXPREOPT_SPEED_APPS += \
 PRODUCT_PACKAGES += \
     fastbootd
 
+# Copy fstab
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/vendor_overlay/etc/fstab.mt6893:$(TARGET_COPY_OUT_RAMDISK)/fstab.mt6893
 
-# HotwordEnrollement
+# Permissions
 PRODUCT_COPY_FILES += \
-    $(DEVICE_PATH)/configs/permissions/privapp-permissions-hotword.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-hotword.xml
-
-# Freeform Multiwindow
-PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/android.software.freeform_window_management.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.freeform_window_management.xml
+    $(DEVICE_PATH)/configs/permissions/privapp-permissions-mediatek.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-mediatek.xml \
+    $(DEVICE_PATH)/configs/permissions/privapp-permissions-camera.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-camera-go.xml \
+    frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/android.hardware.fingerprint.xml \
+    frameworks/native/data/etc/android.software.freeform_window_management.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/android.software.freeform_window_management.xml \
+    frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/android.hardware.fingerprint.xml
 
 # Fingerprint
 PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.3-service.RMX3031 \
 	vendor.oplus.hardware.biometrics.fingerprint@2.1
-
-PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/android.hardware.fingerprint.xml
 
 # HIDL
 PRODUCT_PACKAGES += \
@@ -112,6 +110,10 @@ PRODUCT_PACKAGES += \
     android.hardware.light@2.0-service.RMX3031 \
     android.hardware.sensors@2.0-service.multihal
 
+# Touch
+PRODUCT_PACKAGES += \
+    vendor.lineage.touch@1.0-service.RMX3031
+
 # NFC
 PRODUCT_PACKAGES += \
     com.android.nfc_extras \
@@ -121,31 +123,28 @@ PRODUCT_PACKAGES += \
     Tag
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/nfc/libnfc-nxp.conf:$(TARGET_COPY_OUT_SYSTEM)/etc/libnfc-nxp.conf
+    $(LOCAL_PATH)/configs/nfc/libnfc-nxp.conf:$(TARGET_COPY_OUT_SYSTEM)/etc/libnfc-nxp.conf
 
-# Overlays
+# Enforce RRO targets
+PRODUCT_ENFORCE_RRO_TARGETS := *
+
+# RRO Overlays
 PRODUCT_PACKAGES += \
     FrameworkResOverlay \
     SystemUIOverlay \
     SettingsOverlay \
     TelephonyOverlay \
     DialerOverlay \
-    NotchBarKiller \
-    DocumentsUIOverlay \
     SettingsProviderOverlay \
-    CarrierConfigOverlay
+    CarrierConfigOverlay \
+    RMOverlayManager
 
-# Enforce RRO targets
-PRODUCT_ENFORCE_RRO_TARGETS := *
-
-# MTK IMS Overlays
+# MTK IMS and Wi-Fi Overlays
 PRODUCT_PACKAGES += \
-    mtk-ims \
-    mtk-ims-telephony
-
-# Permissions
-PRODUCT_COPY_FILES += \
-    $(DEVICE_PATH)/configs/permissions/privapp-permissions-mediatek.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-mediatek.xml
+    MtkIms \
+    MtkImsTelephony \
+    TetheringConfigOverlay \
+    WifiOverlay
 
 # RcsService
 PRODUCT_PACKAGES += \
@@ -153,65 +152,32 @@ PRODUCT_PACKAGES += \
     RcsService \
     PresencePolling
 
-# RealmeParts
-PRODUCT_PACKAGES += \
-    RealmeParts \
-	parts.rc
-
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(DEVICE_PATH)
 
 # System prop
--include $(DEVICE_PATH)/system_prop.mk
+-include $(DEVICE_PATH)/configs/props/system_prop.mk
 PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
-
-# RMOverlayManager
-PRODUCT_PACKAGES += \
-    RMOverlayManager
     
 # Setup dalvik vm configs
 $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
-
-# Touch
-PRODUCT_PACKAGES += \
-    vendor.lineage.touch@1.0-service.RMX3031
 
 # Vendor overlay
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/vendor_overlay/,$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/30/)
 
-# Wi-Fi
+# Prebuilt APK
 PRODUCT_PACKAGES += \
-    TetheringConfigOverlay \
-    WifiOverlay
-
-# CameraGo
-PRODUCT_PACKAGES += \
-    CameraGo
-
-# ViperFX
-PRODUCT_PACKAGES += \
-    ViperFX
-
-# Remove unwanted packages
-PRODUCT_PACKAGES += \
-    RemovePackages
-    
-# GCamG
-PRODUCT_COPY_FILES += \
-    $(DEVICE_PATH)/configs/permissions/privapp-permissions-camera-go.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-camera-go.xml
+    ViperFX \
+    Camera \
+    RealmeParts \
+	parts.rc
 
 # Symbols
 PRODUCT_PACKAGES += \
-    libshim_vtservice
- 
-PRODUCT_PACKAGES += \
+    libshim_vtservice \
     ImsServiceBase
-
-# Google Call recording
-PRODUCT_PACKAGES += \
-    $(DEVICE_PATH)/configs/permissions/com.google.android.apps.dialer.call_recording_audio.features.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/com.google.android.apps.dialer.call_recording_audio.features.xml
 
 # Recovery
 PRODUCT_PACKAGES += \

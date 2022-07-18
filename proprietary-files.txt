@@ -33,6 +33,8 @@ lib/libmtkshifter.so
 lib/libvcodec_cap.so
 lib/libvcodec_capenc.so
 lib/libvt_avsync.so
+lib/libsysenv_system.so
+lib64/libsysenv_system.so
 lib64/libmtk_vt_wrapper.so
 lib64/libmtkaudio_utils.so
 lib64/libmtkavenhancements.so
@@ -51,29 +53,20 @@ lib/libimsma_socketwrapper.so|5c63d8ec795fd0b7b9efcdc1adf4d81c5853c73a
 lib/libsignal.so|e008452949ea9bf486bf9892f024f82edcec5819
 lib/libsink.so|a7f8fa44abac16851dc83c58a13407e65c6a2cb0
 lib/libsource.so|0e01c6c5d76e21629463d1f94d28d1b8f91c4c30
-system_ext/lib/vendor.mediatek.hardware.videotelephony@1.0.so
-system_ext/lib64/vendor.mediatek.hardware.videotelephony@1.0.so
+system_ext/lib/vendor.mediatek.hardware.videotelephony@1.0.so|ecb6326c2a040b930a6bfc744ca761b7856154cd
+system_ext/lib64/vendor.mediatek.hardware.videotelephony@1.0.so|5ed11753481998f26a6e39a9bd270dac3f0da46f
 
 # Kernel Modules
-lib/modules/bt_drv.ko
-lib/modules/conninfra.ko
-lib/modules/fmradio_drv.ko
-lib/modules/fpsgo.ko
-lib/modules/gps_drv.ko
-lib/modules/kheaders.ko
-lib/modules/met.ko
-lib/modules/modules.alias
-lib/modules/modules.dep
-lib/modules/modules.load
-lib/modules/modules.softdep
-lib/modules/wlan_drv_gen4m.ko
-lib/modules/wmt_chrdev_wifi.ko
-
-# Charger - From Redmi/merlin/merlin:11/RP1A.200720.011/V12.5.1.0.RJOMIXM:user/release-keys
--bin/charger:bin/chargeonlymode|eeb5a0e80057cce782b4555389310e83a408ad37
-
-# 
-# HotwordEnrollment - from RMX3031_12_C07
--my_product/priv-app/HotwordEnrollmentOKGoogleCORTEXM4.apk:product/priv-app/HotwordEnrollmentOKGoogleCORTEXM4/HotwordEnrollmentOKGoogleCORTEXM4.apk
--my_product/framework/com.android.hotwordenrollment.common.util.jar:system_ext/framework/com.android.hotwordenrollment.common.util.jar
-my_product/etc/permissions/com.android.hotwordenrollment.common.util.xml:system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml
+vendor/lib/modules/bt_drv.ko:product/vendor_overlay/30/lib/modules/bt_drv.ko
+vendor/lib/modules/conninfra.ko:product/vendor_overlay/30/lib/modules/conninfra.ko
+vendor/lib/modules/fmradio_drv.ko:product/vendor_overlay/30/lib/modules/fmradio_drv.ko
+vendor/lib/modules/fpsgo.ko:product/vendor_overlay/30/lib/modules/fpsgo.ko
+vendor/lib/modules/gps_drv.ko:product/vendor_overlay/30/lib/modules/gps_drv.ko
+vendor/lib/modules/kheaders.ko:product/vendor_overlay/30/lib/modules/kheaders.ko
+vendor/lib/modules/met.ko:product/vendor_overlay/30/lib/modules/met.ko
+vendor/lib/modules/modules.alias:product/vendor_overlay/30/lib/modules/modules.alias
+vendor/lib/modules/modules.dep:product/vendor_overlay/30/lib/modules/modules.dep
+vendor/lib/modules/modules.load:product/vendor_overlay/30/lib/modules/modules.load
+vendor/lib/modules/modules.softdep:product/vendor_overlay/30/lib/modules/modules.softdep
+vendor/lib/modules/wlan_drv_gen4m.ko:product/vendor_overlay/30/lib/modules/wlan_drv_gen4m.ko
+vendor/lib/modules/wmt_chrdev_wifi.ko:product/vendor_overlay/30/lib/modules/wmt_chrdev_wifi.ko
